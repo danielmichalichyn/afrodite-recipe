@@ -1,0 +1,24 @@
+{
+  "name": "afrodite-api",
+  "version": "1.0.0",
+  "description": "Simple API for Afrodite JSON",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "afrodite",
+    "api"
+  ],
+  "author": "Daniel Michalichyn",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.0",
+    "express": "^4.18.1",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "chai": "^4.3.6",
+    "mocha": "^10.0.0"
+  }
+}
