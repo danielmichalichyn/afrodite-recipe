@@ -67,27 +67,8 @@ for (const recipe of afrodite) {
 
 		} else if (sec.conteudo.length > 0 && sec.nome === 'Outras informações') {
 
-			let splitted;
-
-			//Recipe have preparation methods in 1 line only, we should split...
-			if(sec.conteudo.length === 1) {
-				console.log(sec.conteudo);
-				sec.conteudo[0] = `${sec.conteudo[0]}0`
-				splitted = sec.conteudo[0].match(/.*?(?=\.)\./gm);
-				
-				//This can for sure be better, but for now it will stay as it is...
-				splitted = splitted ? splitted.map(entry => { return entry.replace(/^ /,'')}) : null;
-				splitted = splitted ? splitted.map(entry => { return entry.replace(/^- /,'')}) : null;
-				
-				information = splitted;
-			
-			} else {
-
-				sec.conteudo = sec.conteudo ? sec.conteudo.filter(entry => { if(entry !== ' ') return true }) : null;
-				information = sec.conteudo;
-
-			}
-
+			sec.conteudo = sec.conteudo ? sec.conteudo.filter(entry => { if(entry !== ' ') return true }) : null;
+			information = sec.conteudo;
 		}
 		
 	};
