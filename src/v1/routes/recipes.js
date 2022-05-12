@@ -8,5 +8,6 @@ const recipes = new recipesController();
 
 router.get('/recipes',recipes.getRecipes);
 router.get('/recipes/names',recipes.getRecipesNames);
+router.get('/recipes/search',recipes.fuzzySearch);
 
 module.exports = router
