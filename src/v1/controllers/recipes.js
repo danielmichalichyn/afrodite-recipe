@@ -83,7 +83,7 @@ class recipesController {
 
 				res.status(200).send({
 					"results": resultFiltered.length,
-					"recipesName": resultFiltered
+					"recipes": resultFiltered
 				});
 			}
 
